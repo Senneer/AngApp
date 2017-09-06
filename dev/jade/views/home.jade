@@ -1,0 +1,9 @@
+table.people
+  thead
+    td
+      button(ng-class="{'_top': isSortUp('name'),'_bottom': isSortDown('name')}" ng-click="sort('name')") Name
+    td
+      button(ng-class="{'_top': isSortUp('age'),'_bottom': isSortDown('age')}" ng-click="sort('age')") Age
+  tr(ng-repeat="person in people | orderBy:sortField:reverse").people__row
+    td {{ person.name }}
+    td {{ person.age }}

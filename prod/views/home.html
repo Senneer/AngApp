@@ -1,0 +1,15 @@
+
+<table class="people">
+  <thead>
+    <td>
+      <button ng-class="{'_top': isSortUp('name'),'_bottom': isSortDown('name')}" ng-click="sort('name')">Name</button>
+    </td>
+    <td>
+      <button ng-class="{'_top': isSortUp('age'),'_bottom': isSortDown('age')}" ng-click="sort('age')">Age</button>
+    </td>
+  </thead>
+  <tr ng-repeat="person in people | orderBy:sortField:reverse" class="people__row">
+    <td>{{ person.name }}</td>
+    <td>{{ person.age }}</td>
+  </tr>
+</table>

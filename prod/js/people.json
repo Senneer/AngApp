@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Name1",
+    "age": 32,
+    "city": "Moscow",
+    "position": "HR"
+  },
+  {
+    "id": 2,
+    "name": "Name2",
+    "age": 22,
+    "city": "Moscow",
+    "position": "Manager"
+  },
+  {
+    "id": 3,
+    "name": "Name3",
+    "age": 44,
+    "city": "NY",
+    "position": "HR"
+  },
+  {
+    "id": 4,
+    "name": "Name4",
+    "age": 45,
+    "city": "NY",
+    "position": "Developer"
+  }
+]

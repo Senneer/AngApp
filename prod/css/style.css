@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+main {
+  box-sizing: border-box;
+  padding: 25px;
+}
+.people {
+  width: 100%;
+  max-width: 500px;
+  border-collapse: collapse;
+}
+.people thead {
+  background: #bbb;
+}
+.people thead td {
+  border: 1px solid #000;
+}
+.people thead button {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px 3px;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.people thead button::after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+.people thead button._top::after {
+  border-top: 4px solid #000;
+}
+.people thead button._bottom::after {
+  border-bottom: 4px solid #000;
+}
+.people tbody td {
+  padding: 10px 3px;
+  border: 1px solid #000;
+}
