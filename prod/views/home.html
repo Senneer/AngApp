@@ -1,12 +1,23 @@
 
+<div class="filter">
+  <div class="filter__row">
+    <label for="city">City</label>
+    <select id="city" name="city" ng-model="formCities" data-ng-options="option for option in cities | unique"></select>
+  </div>
+  <div class="filter__row">
+    <label for="position">Position</label>
+    <select id="position" name="position" ng-model="formPos" data-ng-options="option for option in positions | unique"></select>
+    <button>Search</button>
+  </div>
+</div>
 <table class="people">
   <thead>
-    <td>
+    <th>
       <button ng-class="{'_top': isSortUp('name'),'_bottom': isSortDown('name')}" ng-click="sort('name')">Name</button>
-    </td>
-    <td>
+    </th>
+    <th>
       <button ng-class="{'_top': isSortUp('age'),'_bottom': isSortDown('age')}" ng-click="sort('age')">Age</button>
-    </td>
+    </th>
   </thead>
   <tr ng-repeat="person in people | orderBy:sortField:reverse" class="people__row">
     <td>{{ person.name }}</td>

@@ -2,19 +2,32 @@ peopleApp.controller('peopleHome-ctrl', ['$scope', 'people', function($scope, pe
 
   people
   .then(
-    function(data) {
-      if (data.status != 200) {
+    function(response) {
+      if (response.status != 200) {
         $scope.error = true;
         return false;
       }
 
-      $scope.people = data.data;
+      $scope.people = response.data;
+
+      $scope.cities = [];
+      $scope.positions = [];
+
+      $scope.people.forEach(function(el, i) {
+        $scope.cities.push(el.city);
+      });
+      $scope.people.forEach(function(el, i) {
+        $scope.positions.push(el.position);
+      });
+
+      $scope.formCities = $scope.cities[0];
+      $scope.formPos = $scope.positions[0];
     });
 
   $scope.sortField = undefined;
   $scope.reverse = false;
 
-  $scope.sort= function(fieldName) {
+  $scope.sort = function(fieldName) {
     if ($scope.sortField === fieldName) {
       $scope.reverse = !$scope.reverse;
     } else {

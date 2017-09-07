@@ -1,8 +1,16 @@
+.filter
+  .filter__row
+    label(for="city") City
+    select#city(name="city" ng-model="formCities" data-ng-options="option for option in cities | unique")
+  .filter__row
+    label(for="position") Position
+    select#position(name="position" ng-model="formPos" data-ng-options="option for option in positions | unique")
+    button Search
 table.people
   thead
-    td
+    th
       button(ng-class="{'_top': isSortUp('name'),'_bottom': isSortDown('name')}" ng-click="sort('name')") Name
-    td
+    th
       button(ng-class="{'_top': isSortUp('age'),'_bottom': isSortDown('age')}" ng-click="sort('age')") Age
   tr(ng-repeat="person in people | orderBy:sortField:reverse").people__row
     td {{ person.name }}

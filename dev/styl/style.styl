@@ -6,6 +6,29 @@ main
   box-sizing border-box
   padding 25px
 
+.filter
+  width 100%
+  max-width 500px
+  margin-bottom 20px
+  
+  &__row
+    display grid
+    grid-template-columns 1fr 2fr 2fr
+    grid-template-rows 30px
+    grid-gap 20px
+    align-items: center;
+    &:not(:last-child)
+      margin-bottom 20px
+      
+    select
+      height 100%
+      outline none
+      
+    button
+      display block
+      cursor pointer
+      outline none
+
 .people
   width: 100%
   max-width 500px
@@ -14,6 +37,7 @@ main
   thead
     background #bbbbbb
     
+    th,
     td
       border 1px solid #000000
 

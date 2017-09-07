@@ -6,6 +6,30 @@ main {
   box-sizing: border-box;
   padding: 25px;
 }
+.filter {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+.filter__row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-rows: 30px;
+  grid-gap: 20px;
+  align-items: center;
+}
+.filter__row:not(:last-child) {
+  margin-bottom: 20px;
+}
+.filter__row select {
+  height: 100%;
+  outline: none;
+}
+.filter__row button {
+  display: block;
+  cursor: pointer;
+  outline: none;
+}
 .people {
   width: 100%;
   max-width: 500px;
@@ -14,6 +38,7 @@ main {
 .people thead {
   background: #bbb;
 }
+.people thead th,
 .people thead td {
   border: 1px solid #000;
 }
