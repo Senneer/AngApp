@@ -22,6 +22,26 @@ peopleApp.controller('peopleHome-ctrl', ['$scope', 'people', function($scope, pe
 
       $scope.formCities = $scope.cities[0];
       $scope.formPos = $scope.positions[0];
+
+      $scope.changePos = function(city) {
+        var result = [];
+
+        for (var i = 0; i < $scope.people.length; i++) {
+          if ($scope.people[i].city == city) {
+            result.push($scope.people[i].position);
+          }
+        }
+        $scope.positions = result;
+        $scope.formPos = $scope.positions[0];
+      };
+      $scope.changePos($scope.formCities);
+
+      $scope.filterPeople = {};
+
+      $scope.filterList = function() {
+        $scope.filterPeople.city = $scope.formCities;
+        $scope.filterPeople.position = $scope.formPos;
+      };
     });
 
   $scope.sortField = undefined;

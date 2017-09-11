@@ -6,6 +6,10 @@ peopleApp.config(function($routeProvider) {
       controller: 'peopleHome-ctrl',
       templateUrl: '../views/home.html'
     })
+    .when('/person/:id', {
+      controller: 'person-ctrl',
+      templateUrl: '../views/person.html'
+    })
     .otherwise({
       redirectTo: '/'
     });
