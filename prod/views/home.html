@@ -20,7 +20,7 @@
     </th>
   </thead>
   <tr ng-repeat="person in people | orderBy:sortField:reverse | filter: {city: filterPeople.city, position: filterPeople.position}" class="people__row">
-    <td><a href="#/person/{{ person.id }}">{{ person.name }}</a></td>
+    <td><a ng-href="person/{{ person.id }}">{{ person.name }}</a></td>
     <td>{{ person.age }}</td>
   </tr>
 </table>

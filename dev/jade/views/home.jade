@@ -14,5 +14,5 @@ table.people
       button(ng-class="{'_top': isSortUp('age'),'_bottom': isSortDown('age')}" ng-click="sort('age')") Age
   tr(ng-repeat="person in people | orderBy:sortField:reverse | filter: {city: filterPeople.city, position: filterPeople.position}").people__row
     td
-     a(href="#/person/{{ person.id }}") {{ person.name }}
+     a(ng-href="person/{{ person.id }}") {{ person.name }}
     td {{ person.age }}

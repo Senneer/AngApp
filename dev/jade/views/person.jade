@@ -1,14 +1,14 @@
 .person
   .person__info
     span Name
-    span {{ selectedPerson.name }}
+    span {{ person.name }}
   .person__info
     span City
-    span {{ selectedPerson.city }}
+    span {{ person.city }}
   .person__info
     span Position
-    span {{ selectedPerson.position }}
+    span {{ person.position }}
   .person__info
     span Age
-    span {{ selectedPerson.age }}
-  button.person__back Back to list
+    span {{ person.age }}
+  a.person__back(href="/") Back to list

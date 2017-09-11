@@ -72,3 +72,29 @@ main {
   padding: 10px 3px;
   border: 1px solid #000;
 }
+.people tbody td a {
+  color: #000;
+}
+.people tbody td a:hover {
+  text-decoration: none;
+}
+.person {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 500px;
+  padding: 30px 30px 20px;
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+.person__info {
+  margin-bottom: 20px;
+}
+.person__info span:first-of-type {
+  margin-right: 20px;
+}
+.person__back {
+  padding: 5px 15px;
+  text-decoration: none;
+  color: #000;
+  background: #ccc;
+}

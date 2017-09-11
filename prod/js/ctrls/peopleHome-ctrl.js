@@ -1,4 +1,4 @@
-peopleApp.controller('peopleHome-ctrl', ['$scope', 'people', function($scope, people) {
+peopleApp.controller('peopleHome-ctrl', ['$scope', 'people', '$rootScope', function($scope, people, $rootScope) {
 
   people
   .then(
@@ -8,15 +8,15 @@ peopleApp.controller('peopleHome-ctrl', ['$scope', 'people', function($scope, pe
         return false;
       }
 
-      $scope.people = response.data;
+      $rootScope.people = response.data;
 
       $scope.cities = [];
       $scope.positions = [];
 
-      $scope.people.forEach(function(el, i) {
+      $rootScope.people.forEach(function(el) {
         $scope.cities.push(el.city);
       });
-      $scope.people.forEach(function(el, i) {
+      $rootScope.people.forEach(function(el) {
         $scope.positions.push(el.position);
       });
 
@@ -26,9 +26,9 @@ peopleApp.controller('peopleHome-ctrl', ['$scope', 'people', function($scope, pe
       $scope.changePos = function(city) {
         var result = [];
 
-        for (var i = 0; i < $scope.people.length; i++) {
-          if ($scope.people[i].city == city) {
-            result.push($scope.people[i].position);
+        for (var i = 0; i < $rootScope.people.length; i++) {
+          if ($rootScope.people[i].city == city) {
+            result.push($rootScope.people[i].position);
           }
         }
         $scope.positions = result;
