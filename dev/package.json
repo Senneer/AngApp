@@ -1,18 +1,16 @@
 {
-  "name": "weather-angular",
-  "version": "1.0.0",
-  "description": "project using angular and api to watch weather",
+  "name": "people angular",
+  "version": "0.0.2",
+  "description": "project using angular",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://RayProud@bitbucket.org/RayProud/weather-in-cities-ive-been.git"
+    "url": "git+https://github.com/Senneer/AngApp.git"
   },
-  "author": "RayProud",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/RayProud/weather-in-cities-ive-been#readme",
+  "author": "Senneer",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-connect": "^2.2.0",
